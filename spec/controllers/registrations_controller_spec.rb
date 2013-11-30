@@ -57,7 +57,9 @@ describe RegistrationsController do
 
       it "responds with the registration" do
         post :create, {:registration => valid_attributes}, valid_session
-        expect(response).to be_successful
+        json =  JSON.parse(response.body)
+        json['name'].should == @worker.name
+        json['password'].should == @worker.password
       end
     end
 

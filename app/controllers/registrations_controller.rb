@@ -11,7 +11,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)
 
     if @registration.save
-      render json: @registration, status: :created
+      render json: {:name => @registration.account_worker.name, :password => @registration.account_worker.password}, status: :created
     else
       render json: @registration.errors, status: :unprocessable_entity
     end
