@@ -1,3 +1,4 @@
+ruby "2.0.0"
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -18,6 +19,9 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
 end
+
+gem 'rails_12factor', group: :production
+gem 'unicorn'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
