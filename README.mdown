@@ -12,3 +12,11 @@ something like this:
 }
 ```
 
+At the moment deregistering is manual, and requires something like this
+(on the rails console)
+```Registration.delete_all```
+
+To add another worker, first create the worker on [wemineltc](http://wemineltc.com/accountworkers)
+
+then add the details on the raisl console:
+```AccountWorker.create :name => "eugeneius.2", :password => "y"```
