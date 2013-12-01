@@ -1,2 +1,14 @@
+This is a tiny app that doles out [worker details](http://wemineltc.com/accountworkers). To register a worker (and receive a username/password) POST to /registrations like so:
+
 ```curl -X POST -H "Content-Type: application/json" -d '{"registration": {"aws_id":"xyz"}}' http://immense-anchorage-5927.herokuapp.com/registrations```
+
+The ```aws_id``` parameter can be any identifier. The response will be
+something like this:
+
+```
+{
+  "password": "y",
+  "name": "eugeneius.2"
+}
+```
 
