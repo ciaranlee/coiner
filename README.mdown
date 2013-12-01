@@ -1,0 +1,2 @@
+```curl -X POST -H "Content-Type: application/json" -d '{"registration": {"aws_id":"xyz"}}' http://immense-anchorage-5927.herokuapp.com/registrations```
+
